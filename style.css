@@ -1,10 +1,10 @@
+/* Colors */
+/* font-sizes */
+/* font-families */
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Inter:wght@400;600;700&display=swap");
 /* ----------------------------- */
 /* Custom Properties           */
 /* ----------------------------- */
-/* Colors */
-/* font-sizes */
-/* font-families */
 /* font-sizes */
 /* ----------------------------- */
 /* Reset                         */
@@ -306,6 +306,34 @@ button {
   z-index: 1;
 }
 
+.border-none {
+  border: none !important;
+}
+
+/* Colors */
+/* font-sizes */
+/* font-families */
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 3rem;
+  border-radius: 1.5rem;
+}
+
+.btn-large {
+  padding: 0.75rem 5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #c8c8c8;
+}
+
+/* Colors */
+/* font-sizes */
+/* font-families */
 /* ------------ sections container ----------------- */
 .container {
   display: grid;

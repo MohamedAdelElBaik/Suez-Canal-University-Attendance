@@ -1,0 +1,19 @@
+@import 'variables';
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  font-size: $fs-400;
+}
+
+.btn {
+  padding: 0.5rem 3rem;
+  border-radius: 1.5rem;
+}
+
+.btn-large {
+  padding: 0.75rem 5rem;
+  border-radius: 0.5rem;
+  border: 1px solid $clr-gray;
+}

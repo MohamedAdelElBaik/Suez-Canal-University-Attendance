@@ -1,21 +1,6 @@
 @use 'sass/myStyleFramework';
-
-//  Colors
-$clr-primary: #0468bf;
-$clr-light: #c4dcf0;
-$clr-gray: #c8c8c8;
-$clr-white: #fff;
-$clr-dark: #000;
-
-// font-sizes
-$fs-900: 5rem;
-$fs-800: 3.5rem;
-$fs-700: 2rem;
-$fs-600: 1.75rem;
-$fs-500: 1.5rem;
-$fs-400: 1rem;
-$fs-300: 0.875rem;
-$fs-200: 0.7rem;
+@use 'sass/buttons';
+@import 'sass/variables';
 
 /* ------------ sections container ----------------- */
 .container {
