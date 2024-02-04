@@ -468,10 +468,17 @@ button {
   cursor: pointer;
   margin: 0;
   border-bottom: 1px solid #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .container--subjects .list-container .list--item:hover {
+  background-color: #c8c8c8;
+  color: #000;
+  border-color: #0468bf;
+}
+.container--subjects .list-container .list--item.active {
   background-color: #fff;
   color: #000;
+  border-color: #0468bf;
 }
 .container--subjects .buttons-box {
   width: 80%;

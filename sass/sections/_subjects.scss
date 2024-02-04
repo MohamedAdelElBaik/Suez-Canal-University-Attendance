@@ -50,9 +50,17 @@
         cursor: pointer;
         margin: 0;
         border-bottom: 1px solid $clr-white;
+        transition: background-color 0.5s ease, color 0.5s ease;
+
         &:hover {
+          background-color: $clr-gray;
+          color: $clr-dark;
+          border-color: $clr-primary;
+        }
+        &.active {
           background-color: $clr-white;
           color: $clr-dark;
+          border-color: $clr-primary;
         }
       }
     }
