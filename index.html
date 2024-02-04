@@ -37,7 +37,7 @@
         </div>
       </section>
       <section class="container--lectures bg-light text-dark">
-        <h1 class="fs-700">تركيبات هندسية</h1>
+        <h1 class="fs-800">تركيبات هندسية</h1>
         <div class="lectures">
           <div class="general fs-600">نظرة عامة</div>
           <div class="lectures--card">
@@ -64,11 +64,52 @@
         </div>
       </section>
       <section class="container--attendance bg-white text-dark">
-        <br /><br /><br />
-        <button class="btn-large bg-white">تسجيل الخروج</button>
-        <button class="btn-large bg-primary border-none text-white">
-          تسجيل الخروج
-        </button>
+        <header>
+          <div class="lec-info flex">
+            <div>
+              <h1 class="fs-700">المحاضرة 02</h1>
+              <p class="description">محاضرة مهمة تتكلم عن</p>
+            </div>
+            <div class="date">
+              <h2>تاريخ الانشاء : <span class="fw-400">26 OCT 2024</span></h2>
+            </div>
+          </div>
+          <hr />
+        </header>
+        <section class="lec-control">
+          <div class="lec-control--box flex gap-lg">
+            <div class="img">
+              <img src="/images/QR.png" alt="qr for Attendance" />
+            </div>
+
+            <div class="setting flex-column gap-lg">
+              <div class="flex gap-md">
+                <button class="btn-large bg-primary text-white border-none">
+                  تكبير الصورة
+                </button>
+                <button class="btn-large">تحميل الصورة</button>
+              </div>
+
+              <div class="flex gap-lg">
+                <div class="flex gap-md activate-attendance">
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                  <span class="fs-700 fw-800">تفعيل الحضور</span>
+                </div>
+                <div class="flex-column gap-md">
+                  <h3 class="fs-600">تاريخ المحاضرة</h3>
+                  <input type="date" value="2024-12-20" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </section>
+        <section class="lec-table">
+          <h2 class="header fs-800">جدول الحضور</h2>
+        </section>
       </section>
     </main>
   </body>
