@@ -55,6 +55,8 @@ $ff-sans: 'Cairo', sans-serif;
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent font size inflation */
@@ -201,12 +203,6 @@ button {
   /* outline: 1px solid red; */
 }
 
-.container {
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 80rem;
-}
-
 .lsn {
   list-style: none;
 }
@@ -232,6 +228,12 @@ button {
 }
 
 /* Colors                      */
+.bg-primary {
+  background-color: $clr-primary;
+}
+.bg-gray {
+  background-color: $clr-gray;
+}
 .bg-dark {
   background-color: $clr-dark;
 }
@@ -242,6 +244,12 @@ button {
   background-color: $clr-white;
 }
 
+.text-primary {
+  color: $clr-primary;
+}
+.text-gray {
+  color: $clr-gray;
+}
 .text-dark {
   color: $clr-dark;
 }

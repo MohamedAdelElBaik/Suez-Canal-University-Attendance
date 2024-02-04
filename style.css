@@ -14,6 +14,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent font size inflation */
@@ -160,12 +162,6 @@ button {
   /* outline: 1px solid red; */
 }
 
-.container {
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 80rem;
-}
-
 .lsn {
   list-style: none;
 }
@@ -191,6 +187,14 @@ button {
 }
 
 /* Colors                      */
+.bg-primary {
+  background-color: #0468bf;
+}
+
+.bg-gray {
+  background-color: #c8c8c8;
+}
+
 .bg-dark {
   background-color: #000;
 }
@@ -201,6 +205,14 @@ button {
 
 .bg-white {
   background-color: #fff;
+}
+
+.text-primary {
+  color: #0468bf;
+}
+
+.text-gray {
+  color: #c8c8c8;
 }
 
 .text-dark {
@@ -294,5 +306,9 @@ button {
   z-index: 1;
 }
 
-/* Colors */
-/* font-sizes *//*# sourceMappingURL=style.css.map */
+/* ------------ sections container ----------------- */
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: minmax(200px, 300px) minmax(300px, 400px) minmax(500px, 1fr);
+}/*# sourceMappingURL=style.css.map */
