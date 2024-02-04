@@ -179,12 +179,24 @@ button {
 /* ----------------------------- */
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  // align-items: center;
+}
+
+.gap-sm {
+  gap: 0.5rem;
+}
+.gap-md {
+  gap: 1rem;
+}
+.gap-lg {
+  gap: 2rem;
 }
 
 .grid {
@@ -311,6 +323,19 @@ button {
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-800 {
+  font-weight: 800;
 }
 
 .large-button {
