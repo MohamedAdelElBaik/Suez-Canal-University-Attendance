@@ -1,0 +1,54 @@
+@import '../variables';
+
+.container--lectures {
+  padding: 2rem;
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .lectures {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    &--card,
+    .general {
+      width: 80%;
+      background-color: $clr-white;
+      border-radius: 0.5rem;
+      border: 1px solid gray;
+    }
+
+    .general {
+      padding: 0.75rem 0;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    &--card {
+      padding: 1rem 1.5rem;
+      height: 180px;
+      cursor: pointer;
+
+      h2 {
+        font-size: $fs-700;
+        font-weight: 700;
+      }
+      .number {
+        font-size: $fs-800;
+        font-weight: 700;
+        line-height: 40px;
+        display: block;
+      }
+
+      .date {
+        display: inline-block;
+        direction: ltr; // the text is ordered arabic way so I do this to avoid these behaver
+        margin-top: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

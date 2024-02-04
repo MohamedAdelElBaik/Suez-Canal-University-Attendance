@@ -1,0 +1,65 @@
+@import '../variables';
+
+.container--subjects {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-items: start;
+
+  header {
+    margin-bottom: 2.5rem;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 1rem auto;
+      img {
+        background-color: white;
+        border-radius: 100%;
+      }
+    }
+
+    .professor-info {
+      text-align: center;
+      img {
+        margin: auto;
+        width: 150px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .list-container {
+    .list {
+      // display: flex;
+      // flex-direction: column;
+
+      &--item {
+        padding: 0.85rem 1.5rem 0.85rem 0;
+        cursor: pointer;
+        margin: 0;
+        border-bottom: 1px solid $clr-white;
+        &:hover {
+          background-color: $clr-white;
+          color: $clr-dark;
+        }
+      }
+    }
+  }
+
+  .buttons-box {
+    width: 80%;
+    margin: auto;
+  }
+}

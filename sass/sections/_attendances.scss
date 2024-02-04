@@ -1,0 +1,39 @@
+@import '../variables';
+
+.container--attendances {
+  header {
+    .lec-info {
+      padding: 2rem 2.5rem;
+
+      .description {
+        margin-top: 1rem;
+      }
+
+      .date {
+        margin: auto;
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .lec-control {
+    margin: 2rem;
+
+    &--box {
+      margin-bottom: 2rem;
+
+      .img {
+        width: 200px;
+        margin-inline: 2rem;
+      }
+    }
+  }
+
+  .lec-table {
+    .header {
+      text-align: center;
+    }
+  }
+}

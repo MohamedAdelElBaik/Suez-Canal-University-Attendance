@@ -426,13 +426,6 @@ button {
 /* Colors */
 /* font-sizes */
 /* font-families */
-/* ------------ sections container ----------------- */
-.container {
-  display: grid;
-  min-height: 100vh;
-  grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(500px, 1fr);
-}
-
 .container--subjects {
   display: flex;
   flex-direction: column;
@@ -485,6 +478,9 @@ button {
   margin: auto;
 }
 
+/* Colors */
+/* font-sizes */
+/* font-families */
 .container--lectures {
   padding: 2rem;
 }
@@ -532,28 +528,41 @@ button {
   font-weight: 600;
 }
 
-.container--attendance header .lec-info {
+/* Colors */
+/* font-sizes */
+/* font-families */
+.container--attendances header .lec-info {
   padding: 2rem 2.5rem;
 }
-.container--attendance header .lec-info .description {
+.container--attendances header .lec-info .description {
   margin-top: 1rem;
 }
-.container--attendance header .lec-info .date {
+.container--attendances header .lec-info .date {
   margin: auto;
 }
-.container--attendance header .lec-info .date span {
+.container--attendances header .lec-info .date span {
   font-weight: 400;
 }
-.container--attendance .lec-control {
+.container--attendances .lec-control {
   margin: 2rem;
 }
-.container--attendance .lec-control--box {
+.container--attendances .lec-control--box {
   margin-bottom: 2rem;
 }
-.container--attendance .lec-control--box .img {
+.container--attendances .lec-control--box .img {
   width: 200px;
   margin-inline: 2rem;
 }
-.container--attendance .lec-table .header {
+.container--attendances .lec-table .header {
   text-align: center;
+}
+
+/* Colors */
+/* font-sizes */
+/* font-families */
+/* ------------ sections container ----------------- */
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(500px, 1fr);
 }/*# sourceMappingURL=style.css.map */
