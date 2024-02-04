@@ -1,11 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Inter:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Inter:wght@400;600;700&display=swap');
+
 /* ----------------------------- */
 /* Custom Properties           */
 /* ----------------------------- */
+
 /* Colors */
+$clr-primary: #0468bf;
+$clr-light: #c4dcf0;
+$clr-gray: #c8c8c8;
+$clr-white: #fff;
+$clr-dark: #000;
+
 /* font-sizes */
+$fs-900: 5rem;
+$fs-800: 3.5rem;
+$fs-700: 2rem;
+$fs-600: 1.75rem;
+$fs-500: 1.5rem;
+$fs-400: 1rem;
+$fs-300: 0.875rem;
+$fs-200: 0.7rem;
+
 /* font-families */
+$ff-sans: 'Cairo', sans-serif;
+
+// @media (min-width: 35em) {
+//   :root {
+//     --fs-900: 9.375rem;
+//     --fs-800: 5rem;
+//     --fs-700: 2.5rem;
+//     --fs-600: 1.5rem;
+//     --fs-500: 1.25rem;
+//     --fs-400: 1rem;
+//   }
+// }
+
+// @media (min-width: 50em) {
+//   :root {
 /* font-sizes */
+//     --fs-800: 6.25rem;
+//     --fs-700: 2.35rem;
+//     --fs-600: 2rem;
+//     --fs-500: 1.75rem;
+//     --fs-400: 1.125rem;
+//     --fs-300: 1rem;
+//   }
+// }
+
 /* ----------------------------- */
 /* Reset                         */
 /* ----------------------------- */
@@ -38,8 +79,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -70,8 +111,7 @@ h4 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
   color: currentColor;
 }
 
@@ -102,10 +142,10 @@ textarea:not([rows]) {
 
 /* Set up the body */
 body {
-  font-family: "Cairo", sans-serif;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #000;
+  font-family: $ff-sans;
+  font-size: $fs-400;
+  background-color: $clr-white;
+  color: $clr-dark;
   line-height: 1.5;
   min-height: 100svh;
 }
@@ -136,6 +176,7 @@ button {
     scroll-behavior: auto !important;
   }
 }
+
 /* ----------------------------- */
 /* Utility Classes               */
 /* ----------------------------- */
@@ -169,7 +210,6 @@ button {
 .lsn {
   list-style: none;
 }
-
 .reset-link a {
   text-decoration: none;
   color: inherit;
@@ -187,32 +227,29 @@ button {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  // white-space: nowrap; /* added line */
   border: 0;
 }
 
 /* Colors                      */
 .bg-dark {
-  background-color: #000;
+  background-color: $clr-dark;
 }
-
 .bg-light {
-  background-color: #c4dcf0;
+  background-color: $clr-light;
 }
-
 .bg-white {
-  background-color: #fff;
+  background-color: $clr-white;
 }
 
 .text-dark {
-  color: #000;
+  color: $clr-dark;
 }
-
 .text-light {
-  color: #c4dcf0;
+  color: $clr-light;
 }
-
 .text-white {
-  color: #fff;
+  color: $clr-white;
 }
 
 .box {
@@ -222,18 +259,17 @@ button {
 }
 
 /* typography */
+
 .ff-sans-cond {
-  font-family: "Cairo", sans-serif;
+  font-family: $ff-sans;
 }
 
 .letter-spacing-1 {
   letter-spacing: 4.75px;
 }
-
 .letter-spacing-2 {
   letter-spacing: 2.7px;
 }
-
 .letter-spacing-3 {
   letter-spacing: 2.35px;
 }
@@ -243,35 +279,28 @@ button {
 }
 
 .fs-900 {
-  font-size: 5rem;
+  font-size: $fs-900;
 }
-
 .fs-800 {
-  font-size: 3.5rem;
+  font-size: $fs-800;
 }
-
 .fs-700 {
-  font-size: 2rem;
+  font-size: $fs-700;
 }
-
 .fs-600 {
-  font-size: 1.75rem;
+  font-size: $fs-600;
 }
-
 .fs-500 {
-  font-size: 1.5rem;
+  font-size: $fs-500;
 }
-
 .fs-400 {
-  font-size: 1rem;
+  font-size: $fs-400;
 }
-
 .fs-300 {
-  font-size: 0.875rem;
+  font-size: $fs-300;
 }
-
 .fs-200 {
-  font-size: 0.7rem;
+  font-size: $fs-200;
 }
 
 .fs-900,
@@ -293,6 +322,3 @@ button {
   text-decoration: none;
   z-index: 1;
 }
-
-/* Colors */
-/* font-sizes *//*# sourceMappingURL=style.css.map */
