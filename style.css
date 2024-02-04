@@ -25,6 +25,19 @@ html {
   text-size-adjust: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+article {
+  font-size: 1rem;
+}
+
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,
@@ -340,7 +353,7 @@ button {
 .container {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: minmax(200px, 300px) minmax(300px, 400px) minmax(500px, 1fr);
+  grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(500px, 1fr);
 }
 
 .container--subjects {
@@ -393,4 +406,51 @@ button {
 .container--subjects .buttons-box {
   width: 80%;
   margin: auto;
+}
+
+.container--lectures {
+  padding: 2rem;
+}
+.container--lectures h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.container--lectures .lectures {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.container--lectures .lectures--card,
+.container--lectures .lectures .general {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+}
+.container--lectures .lectures .general {
+  padding: 0.75rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+.container--lectures .lectures--card {
+  padding: 1rem 1.5rem;
+  height: 180px;
+  cursor: pointer;
+}
+.container--lectures .lectures--card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.container--lectures .lectures--card .number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 40px;
+  display: block;
+}
+.container--lectures .lectures--card .date {
+  display: inline-block;
+  direction: ltr;
+  margin-top: 1.5rem;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

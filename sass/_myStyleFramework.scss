@@ -48,6 +48,19 @@ html {
   text-size-adjust: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+article {
+  font-size: $fs-400;
+}
+
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,
