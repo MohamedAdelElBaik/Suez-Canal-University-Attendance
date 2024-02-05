@@ -1,0 +1,31 @@
+@import './variables';
+
+table,
+th,
+td {
+  border: 1px solid $clr-gray;
+  border-collapse: collapse;
+  padding: 0.3rem 0.75rem;
+}
+
+table {
+  direction: ltr;
+  width: 95%;
+  margin: auto;
+}
+
+caption {
+  margin-bottom: 1rem;
+}
+
+td:nth-child(1),
+td:nth-child(5) {
+  width: 10%;
+}
+td:nth-child(2) {
+  width: 40%;
+}
+td:nth-child(3),
+td:nth-child(4) {
+  width: 20%;
+}
