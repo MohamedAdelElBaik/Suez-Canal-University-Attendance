@@ -24,11 +24,11 @@ $('document').ready(function () {
   // control of click on subject list (add active class)
   $(document).on('click', '.list--item', function () {
     selectedLecId = 1;
-    // remove active class from all list items
-    $('.list--item').removeClass('active');
 
-    // add class (active) to clicked item
-    $(this).addClass('active');
+    // clear active class for all list and add for selected
+    clearActive('.list--item');
+    addActive(this);
+
     $('#subject-title').text($(this).text());
 
     // get data of subject that have this id
@@ -56,6 +56,9 @@ $('document').ready(function () {
 
   // select lecture
   $(document).on('click', '.lectures--card', function () {
+    clearActive('.lectures--card');
+    addActive(this);
+
     selectedLecId = $(this).data().id;
 
     const lecData = getSelectedLecData();
@@ -86,9 +89,11 @@ function addSubjectsNameToList() {
 
 function addLecturesDataToLectures(data) {
   $('.lectures--card').remove();
-  data.subLectures.map((lec) =>
+  data.subLectures.map((lec, index) =>
     $('.lectures').append(
-      `<div data-id="${lec.id}" class="lectures--card">
+      `<div data-id="${lec.id}" class="lectures--card ${
+        index === 0 ? 'active' : ''
+      }">
         <h2>المحاضرة</h2>
         <span class="number">0${lec.id}</span>
         <div><span class="date">${lec.date}</span></div>
@@ -101,4 +106,13 @@ function addLectureDataToAttendance(data) {
   $('#lec-title').text(data.title);
   $('#lec-description').text(data.description);
   $('#lec-date').text(data.date);
+}
+
+// clear active class for all list
+function clearActive(selected) {
+  $(selected).removeClass('active');
+}
+// add active class to clicked item
+function addActive(selected) {
+  $(selected).addClass('active');
 }
