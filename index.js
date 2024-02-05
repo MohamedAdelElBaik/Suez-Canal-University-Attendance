@@ -1,6 +1,8 @@
 let data;
 let selectedSubId = 1;
 let selectedLecId = 1;
+let tableItemsStartNum = 0;
+const tableItemsNum = 12;
 
 $('document').ready(function () {
   fetch('./data/data.json')
@@ -64,6 +66,26 @@ $('document').ready(function () {
     const lecData = getSelectedLecData();
     updateAttendanceSection(lecData);
   });
+
+  // go to next page in table
+  $('#table-forward').click(function () {
+    const attendanceArr = getSelectedLecData().attendance;
+
+    // if there is data in next page go forward
+    if (attendanceArr.length > tableItemsStartNum + tableItemsNum) {
+      tableItemsStartNum = tableItemsStartNum + tableItemsNum;
+      addAttendanceDataToTable(attendanceArrSlice());
+    }
+  });
+
+  // go back to previous page in table
+  $('#table-back').click(function () {
+    // if there is data in previous page go back
+    if (tableItemsStartNum > 0) {
+      tableItemsStartNum = tableItemsStartNum - tableItemsNum;
+      addAttendanceDataToTable(attendanceArrSlice());
+    }
+  });
 });
 
 function getSelectedLecturesData() {
@@ -102,9 +124,11 @@ function addLecturesDataToLectures(data) {
   );
 }
 
+// let test;
 function updateAttendanceSection(data) {
+  tableItemsStartNum = 0; // reset page table number
   addLectureDataToAttendance(data);
-  addAttendanceDataToTable(data.attendance);
+  addAttendanceDataToTable(data.attendance.slice(0, tableItemsNum));
 }
 
 function addLectureDataToAttendance(data) {
@@ -126,6 +150,15 @@ function addAttendanceDataToTable(data) {
       <td class="${atten.status}">${atten.status ? '✔' : '✖'}</td>
     </tr>`
     )
+  );
+}
+
+// slice attendance array and return updated slice value
+function attendanceArrSlice() {
+  const attendanceArr = getSelectedLecData().attendance;
+  return attendanceArr.slice(
+    tableItemsStartNum,
+    tableItemsStartNum + tableItemsNum
   );
 }
 

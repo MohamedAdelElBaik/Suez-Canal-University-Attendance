@@ -11,7 +11,7 @@ td {
 table {
   direction: ltr;
   width: 95%;
-  margin: auto;
+  margin: 2rem auto 4rem auto;
 }
 
 caption {
@@ -24,6 +24,12 @@ td:nth-child(4) {
   width: 10%;
   text-align: center;
 }
+td:nth-child(2) {
+  width: 40%;
+}
+td:nth-child(3) {
+  width: 30%;
+}
 
 td:nth-child(5) {
   &.false {
@@ -32,4 +38,27 @@ td:nth-child(5) {
   &.true {
     color: green;
   }
+}
+
+tfoot {
+  background-color: $clr-gray;
+  // tr {
+  //   td:nth-child(2),
+  //   td:nth-child(3) {
+  //     border-right-color: inherit;
+  //   }
+  // }
+}
+
+#table-back,
+#table-forward {
+  font-weight: 800;
+  font-size: $fs-600;
+  background-color: inherit;
+  width: 100%;
+}
+
+#table-back.disable,
+#table-forward.disable {
+  color: red;
 }
