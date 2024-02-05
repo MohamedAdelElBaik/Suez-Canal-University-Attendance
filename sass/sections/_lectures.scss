@@ -31,6 +31,12 @@
       padding: 1rem 1.5rem;
       height: 180px;
       cursor: pointer;
+      transition: background-color 700ms ease;
+
+      &:hover,
+      &.active {
+        background-color: $clr-gray;
+      }
 
       h2 {
         font-size: $fs-700;

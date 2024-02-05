@@ -517,6 +517,10 @@ button {
   padding: 1rem 1.5rem;
   height: 180px;
   cursor: pointer;
+  transition: background-color 700ms ease;
+}
+.container--lectures .lectures--card:hover, .container--lectures .lectures--card.active {
+  background-color: #c8c8c8;
 }
 .container--lectures .lectures--card h2 {
   font-size: 1.5rem;
