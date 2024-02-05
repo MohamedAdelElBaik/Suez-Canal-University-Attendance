@@ -1,4 +1,6 @@
 let data;
+let selectedSubId;
+
 $('document').ready(function () {
   fetch('./data/data.json')
     .then((response) => response.json())
@@ -7,6 +9,8 @@ $('document').ready(function () {
       data = Data;
       addSubjectsNameToList(Data);
       addLecturesDataToLectures(Data[0]);
+      addLectureDataToAttendance(Data[0].subLectures[0]);
+      selectedSubId = 1;
     })
     .catch((error) => {
       console.error('Error loading JSON:', error);
@@ -27,13 +31,19 @@ $('document').ready(function () {
     $('.lectures--card').remove();
     data.subLectures.map((lec) =>
       $('.lectures').append(
-        `<div class="lectures--card">
+        `<div data-id="${lec.id}" class="lectures--card">
           <h2>المحاضرة</h2>
           <span class="number">0${lec.id}</span>
           <div><span class="date">${lec.date}</span></div>
         </div>`
       )
     );
+  }
+
+  function addLectureDataToAttendance(data) {
+    $('#lec-title').text(data.title);
+    $('#lec-description').text(data.description);
+    $('#lec-date').text(data.date);
   }
 
   // control of click on subject list
@@ -48,7 +58,15 @@ $('document').ready(function () {
 
     // get data of subject that have this id
     const id = $(this).data().id;
-    addLecturesDataToLectures(data.find((sub) => sub.id == id));
+    selectedSubId = id;
+
+    // update lectures data
+    const lecturesData = data.find((sub) => sub.id == id);
+    addLecturesDataToLectures(lecturesData);
+
+    // update lecture data
+    const lecData = data.find((sub) => sub.id == selectedSubId).subLectures[0];
+    addLectureDataToAttendance(lecData);
 
     // Encode the clicked text to ensure it is URL-safe
     // var encodedText = encodeURIComponent($(this).text());
@@ -59,5 +77,14 @@ $('document').ready(function () {
 
     // Push the new state to the browser's history
     // history.pushState(null, null, newUrl);
+  });
+
+  $(document).on('click', '.lectures--card', function () {
+    const selectedLecId = $(this).data().id;
+
+    const lecData = data
+      .find((sub) => sub.id == selectedSubId)
+      .subLectures.find((lec) => lec.id == selectedLecId);
+    addLectureDataToAttendance(lecData);
   });
 });
