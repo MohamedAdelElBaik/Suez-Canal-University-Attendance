@@ -1,10 +1,9 @@
 $('document').ready(function () {
   $('.list--item').click(function () {
-    // get clicked item list name
-    const listName = this.attributes.name.value;
-
+    // remove active class from all list items
     $('.list--item').removeClass('active');
+
     // add class (active) to clicked item
-    $(`.list--item[name="${listName}"]`).addClass('active');
+    $(this).addClass('active');
   });
 });
