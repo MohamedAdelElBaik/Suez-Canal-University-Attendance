@@ -15,7 +15,7 @@ $('document').ready(function () {
       addLecturesDataToLectures(lecturesData);
 
       const lecData = getSelectedLecData();
-      addLectureDataToAttendance(lecData);
+      updateAttendanceSection(lecData);
     })
     .catch((error) => {
       console.error('Error loading JSON:', error);
@@ -41,7 +41,7 @@ $('document').ready(function () {
 
     // update lecture data
     const lecData = getSelectedLecData();
-    addLectureDataToAttendance(lecData);
+    updateAttendanceSection(lecData);
 
     // Encode the clicked text to ensure it is URL-safe
     // var encodedText = encodeURIComponent($(this).text());
@@ -62,7 +62,7 @@ $('document').ready(function () {
     selectedLecId = $(this).data().id;
 
     const lecData = getSelectedLecData();
-    addLectureDataToAttendance(lecData);
+    updateAttendanceSection(lecData);
   });
 });
 
@@ -102,10 +102,31 @@ function addLecturesDataToLectures(data) {
   );
 }
 
+function updateAttendanceSection(data) {
+  addLectureDataToAttendance(data);
+  addAttendanceDataToTable(data.attendance);
+}
+
 function addLectureDataToAttendance(data) {
   $('#lec-title').text(data.title);
   $('#lec-description').text(data.description);
   $('#lec-date').text(data.date);
+}
+
+function addAttendanceDataToTable(data) {
+  $('#attendance-body').html('');
+
+  data.map((atten) =>
+    $('#attendance-body').append(
+      `<tr>
+      <td>${atten.id}</td>
+      <td>${atten.fullName}</td>
+      <td>${atten.department}</td>
+      <td>${atten.level}</td>
+      <td class="${atten.status}">${atten.status ? '✔' : '✖'}</td>
+    </tr>`
+    )
+  );
 }
 
 // clear active class for all list
