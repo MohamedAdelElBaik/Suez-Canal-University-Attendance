@@ -1,7 +1,7 @@
 /* Colors */
 /* font-sizes */
-/* font-families */
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Inter:wght@400;600;700&display=swap");
+/* font-families */
 /* ----------------------------- */
 /* Custom Properties           */
 /* ----------------------------- */
@@ -34,6 +34,7 @@ h6,
 p,
 span,
 div,
+li,
 article {
   font-size: 1rem;
 }
@@ -367,6 +368,11 @@ button {
   padding: 0.5rem 3rem;
   border-radius: 1.5rem;
 }
+@media (max-width: 599px) {
+  .btn {
+    padding: 0.5rem;
+  }
+}
 
 .btn-large {
   width: 100%;
@@ -381,6 +387,12 @@ button {
   width: 60px;
   height: 34px;
   /* Rounded sliders */
+}
+@media (max-width: 599px) {
+  .switch {
+    width: 50px;
+    height: 26px;
+  }
 }
 .switch input {
   opacity: 0;
@@ -406,6 +418,14 @@ button {
   bottom: 4px;
   background-color: #fff;
   transition: 0.4s;
+}
+@media (max-width: 599px) {
+  .switch .slider:before {
+    height: 22px;
+    width: 22px;
+    left: 1px;
+    bottom: 2px;
+  }
 }
 .switch input:checked + .slider {
   background-color: #0468bf;
@@ -442,6 +462,13 @@ table {
 
 caption {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 599px) {
+  th,
+  td {
+    font-size: 0.7rem;
+  }
 }
 
 td:nth-child(1),
@@ -495,6 +522,11 @@ tfoot {
 .container--subjects header {
   margin-bottom: 2.5rem;
 }
+@media (max-width: 599px) {
+  .container--subjects header {
+    display: none;
+  }
+}
 .container--subjects header .logo {
   display: flex;
   align-items: center;
@@ -517,6 +549,11 @@ tfoot {
      object-fit: cover;
   border-radius: 100%;
 }
+@media (max-width: 599px) {
+  .container--subjects header .professor-info {
+    display: none;
+  }
+}
 .container--subjects .header {
   display: flex;
   align-items: center;
@@ -524,12 +561,32 @@ tfoot {
   padding-right: 5px;
   margin-bottom: 0.25rem;
 }
+@media (max-width: 599px) {
+  .container--subjects .header {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .container--subjects .list-container .list {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .container--subjects .list-container .list--item {
   padding: 0.85rem 1.5rem 0.85rem 0;
   cursor: pointer;
   margin: 0;
   border-bottom: 1px solid #fff;
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+@media (max-width: 599px) {
+  .container--subjects .list-container .list--item {
+    font-size: 0.7rem;
+    padding: 0.85rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
 }
 .container--subjects .list-container .list--item:hover {
   background-color: #c8c8c8;
@@ -545,6 +602,11 @@ tfoot {
   width: 80%;
   margin: auto;
 }
+@media (max-width: 599px) {
+  .container--subjects .buttons-box {
+    display: none;
+  }
+}
 
 /* Colors */
 /* font-sizes */
@@ -552,18 +614,36 @@ tfoot {
 .container--lectures {
   padding: 2rem;
 }
+@media (max-width: 599px) {
+  .container--lectures {
+    padding: 1rem 0.5rem;
+  }
+}
 .container--lectures h1 {
   text-align: center;
   margin-bottom: 2rem;
+}
+@media (max-width: 599px) {
+  .container--lectures h1 {
+    display: none;
+  }
 }
 .container--lectures .lectures {
   max-height: 85vh;
   overflow: scroll;
   scrollbar-width: none;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+}
+@media (max-width: 599px) {
+  .container--lectures .lectures {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    overflow: scroll;
+  }
 }
 .container--lectures .lectures--card,
 .container--lectures .lectures .general {
@@ -583,6 +663,17 @@ tfoot {
   cursor: pointer;
   transition: background-color 700ms ease;
 }
+@media (max-width: 599px) {
+  .container--lectures .lectures--card {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 80px;
+    text-align: center;
+    height: 35px;
+    padding: 0.3rem;
+  }
+}
 .container--lectures .lectures--card:hover, .container--lectures .lectures--card.active {
   background-color: #c8c8c8;
 }
@@ -590,17 +681,35 @@ tfoot {
   font-size: 1.5rem;
   font-weight: 700;
 }
+@media (max-width: 599px) {
+  .container--lectures .lectures--card h2 {
+    display: inline;
+    font-size: 0.7rem;
+  }
+}
 .container--lectures .lectures--card .number {
   font-size: 2rem;
   font-weight: 700;
   line-height: 40px;
   display: block;
 }
+@media (max-width: 599px) {
+  .container--lectures .lectures--card .number {
+    display: inline;
+    font-size: 0.7rem;
+    line-height: 10px;
+  }
+}
 .container--lectures .lectures--card .date {
   display: inline-block;
   direction: ltr;
   margin-top: 1.5rem;
   font-weight: 600;
+}
+@media (max-width: 599px) {
+  .container--lectures .lectures--card .date {
+    display: none;
+  }
 }
 
 /* Colors */
@@ -609,14 +718,47 @@ tfoot {
 .container--attendances header .lec-info {
   padding: 2rem 2.5rem;
 }
+@media (max-width: 599px) {
+  .container--attendances header .lec-info {
+    align-items: start;
+    justify-content: space-between;
+    padding: 0.75rem;
+  }
+}
+@media (max-width: 599px) {
+  .container--attendances header .lec-info h1 {
+    font-size: 1rem;
+  }
+}
 .container--attendances header .lec-info .description {
   margin-top: 1rem;
+}
+@media (max-width: 599px) {
+  .container--attendances header .lec-info .description {
+    margin-top: 0.2rem;
+    font-size: 0.875rem;
+  }
 }
 .container--attendances header .lec-info .date {
   margin: auto;
 }
+@media (max-width: 599px) {
+  .container--attendances header .lec-info .date {
+    margin: 0;
+  }
+}
+@media (max-width: 599px) {
+  .container--attendances header .lec-info .date h2 {
+    font-size: 0.875rem;
+  }
+}
 .container--attendances header .lec-info .date span {
   font-weight: 400;
+}
+@media (max-width: 599px) {
+  .container--attendances header .lec-info .date span {
+    font-size: 0.7rem;
+  }
 }
 .container--attendances .lec-control {
   margin: 2rem;
@@ -625,12 +767,24 @@ tfoot {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, minmax(200px, 250px));
-  grid-template-areas: "img btnMax btnUpload" "img btnActivate date ";
+  grid-template-areas: "img btnMax btnUpload" "img btnActivate date";
   margin-bottom: 2rem;
+}
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box {
+    gap: 0.75rem;
+    grid-template-columns: minmax(10px, 170px) 1fr;
+    grid-template-areas: "img btnMax" "img btnUpload" "img date" "img btnActivate";
+  }
 }
 .container--attendances .lec-control--box--img {
   margin-inline: 2rem;
   grid-area: img;
+}
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box--img {
+    margin-inline: 0;
+  }
 }
 .container--attendances .lec-control--box--max {
   grid-area: btnMax;
@@ -639,14 +793,37 @@ tfoot {
   grid-area: btnUpload;
 }
 .container--attendances .lec-control--box--max, .container--attendances .lec-control--box--upload {
-  align-self: flex-end;
   height: 50px;
+  align-self: flex-end;
+}
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box--max, .container--attendances .lec-control--box--upload {
+    height: 40px;
+    font-size: 0.7rem;
+    align-self: flex-start;
+  }
 }
 .container--attendances .lec-control--box--activate {
   grid-area: btnActivate;
 }
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box--activate {
+    gap: 0.5rem;
+    justify-self: center;
+  }
+}
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box--activate span {
+    font-size: 0.7rem;
+  }
+}
 .container--attendances .lec-control--box--date {
   grid-area: date;
+}
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box--date h3 {
+    display: none;
+  }
 }
 .container--attendances .lec-control--box--date input {
   font-size: 1.25rem;
@@ -654,8 +831,19 @@ tfoot {
   text-align: center;
   outline-color: #0468bf;
 }
+@media (max-width: 599px) {
+  .container--attendances .lec-control--box--date input {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
 .container--attendances .lec-table .header {
   text-align: center;
+}
+@media (max-width: 599px) {
+  .container--attendances .lec-table .header {
+    font-size: 1rem;
+  }
 }
 
 /* Colors */
@@ -666,4 +854,10 @@ tfoot {
   display: grid;
   min-height: 100vh;
   grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(500px, 1fr);
+}
+@media (max-width: 599px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

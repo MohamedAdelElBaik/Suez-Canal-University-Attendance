@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../responsive';
 
 .container--subjects {
   display: flex;
@@ -8,6 +9,9 @@
 
   header {
     margin-bottom: 2.5rem;
+    @include phone-only {
+      display: none;
+    }
 
     .logo {
       display: flex;
@@ -30,6 +34,10 @@
         object-fit: cover;
         border-radius: 100%;
       }
+
+      @include phone-only {
+        display: none;
+      }
     }
   }
 
@@ -39,12 +47,21 @@
     gap: 0.5rem;
     padding-right: 5px;
     margin-bottom: 0.25rem;
+
+    @include phone-only {
+      display: none;
+    }
   }
 
   .list-container {
     .list {
       // display: flex;
       // flex-direction: column;
+      @include phone-only {
+        display: flex;
+        flex-direction: row;
+        // border: 1px solid $clr-white;
+      }
 
       &--item {
         padding: 0.85rem 1.5rem 0.85rem 0;
@@ -52,6 +69,15 @@
         margin: 0;
         border-bottom: 1px solid $clr-white;
         transition: background-color 0.5s ease, color 0.5s ease;
+
+        @include phone-only {
+          font-size: $fs-200;
+
+          padding: 0.85rem 0.5rem;
+          display: flex;
+          flex-direction: row;
+          border: none;
+        }
 
         &:hover {
           background-color: $clr-gray;
@@ -70,5 +96,8 @@
   .buttons-box {
     width: 80%;
     margin: auto;
+    @include phone-only {
+      display: none;
+    }
   }
 }
