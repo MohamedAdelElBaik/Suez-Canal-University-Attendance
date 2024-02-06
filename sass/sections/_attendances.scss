@@ -2,6 +2,8 @@
 @import '../responsive';
 
 .container--attendances {
+  overflow: scroll;
+
   header {
     .lec-info {
       padding: 2rem 2.5rem;

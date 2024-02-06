@@ -2,7 +2,7 @@
 @import '../responsive';
 
 .container--lectures {
-  padding: 2rem;
+  padding: 2rem 2rem 0.3rem 2rem;
   @include tablet-portrait {
     padding: 1rem 0.5rem;
   }
@@ -17,26 +17,26 @@
   }
 
   .lectures {
-    max-height: 85vh;
+    max-height: 88vh;
     overflow: scroll;
     scrollbar-width: none;
 
     display: inline-flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
     align-items: center;
 
     @include tablet-portrait {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5rem;
-      // width: 100%;
       overflow: scroll;
     }
 
     &--card,
     .general {
-      width: 80%;
+      width: 70%;
       background-color: $clr-white;
       border-radius: 0.5rem;
       border: 1px solid gray;

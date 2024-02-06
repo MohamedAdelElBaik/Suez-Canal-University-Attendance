@@ -10,14 +10,16 @@
 /* ------------ sections container ----------------- */
 .container {
   display: grid;
-  min-height: 100vh;
   grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(
       500px,
       1fr
     );
+  grid-template-rows: 100vh;
+  grid-template-rows: 100dvh;
 
   @include tablet-portrait {
     display: flex;
     flex-direction: column;
+    grid-template-rows: auto;
   }
 }
