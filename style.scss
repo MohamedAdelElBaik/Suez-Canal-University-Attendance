@@ -16,7 +16,7 @@
       1fr
     );
 
-  @include phone-only {
+  @include tablet-portrait {
     display: flex;
     flex-direction: column;
   }

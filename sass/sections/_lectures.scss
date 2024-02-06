@@ -3,7 +3,7 @@
 
 .container--lectures {
   padding: 2rem;
-  @include phone-only {
+  @include tablet-portrait {
     padding: 1rem 0.5rem;
   }
 
@@ -11,7 +11,7 @@
     text-align: center;
     margin-bottom: 2rem;
 
-    @include phone-only {
+    @include tablet-portrait {
       display: none;
     }
   }
@@ -26,7 +26,7 @@
     gap: 2rem;
     align-items: center;
 
-    @include phone-only {
+    @include tablet-portrait {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -54,14 +54,17 @@
       cursor: pointer;
       transition: background-color 700ms ease;
 
-      @include phone-only {
+      @include tablet-portrait {
+        align-items: center;
+        width: fit-content;
+        text-align: center;
+        height: fit-content;
+        padding: 0.3rem;
+      }
+
+      @include phone {
         display: flex;
         gap: 0.5rem;
-        align-items: center;
-        width: 80px;
-        text-align: center;
-        height: 35px;
-        padding: 0.3rem;
       }
 
       &:hover,
@@ -70,11 +73,12 @@
       }
 
       h2 {
-        font-size: $fs-700;
+        font-size: $fs-800;
         font-weight: 700;
-        @include phone-only {
+        @include tablet-portrait {
+          font-size: $fs-600;
           display: inline;
-          font-size: $fs-200;
+          font-weight: 600;
         }
       }
       .number {
@@ -83,9 +87,14 @@
         line-height: 40px;
         display: block;
 
-        @include phone-only {
+        @include tablet-portrait {
+          font-size: $fs-600;
           display: inline;
-          font-size: $fs-200;
+          font-weight: 600;
+          // font-size: $fs-500;
+        }
+        @include phone {
+          // font-size: $fs-200;
           line-height: 10px;
         }
       }
@@ -95,7 +104,11 @@
         direction: ltr; // the text is ordered arabic way so I do this to avoid these behaver
         margin-top: 1.5rem;
         font-weight: 600;
-        @include phone-only {
+        @include tablet-portrait {
+          display: block;
+          margin-top: 0;
+        }
+        @include phone {
           display: none;
         }
       }

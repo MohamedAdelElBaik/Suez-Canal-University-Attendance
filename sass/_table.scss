@@ -19,13 +19,6 @@ caption {
   margin-bottom: 1rem;
 }
 
-th,
-td {
-  @include phone-only {
-    font-size: $fs-200;
-  }
-}
-
 td:nth-child(1),
 td:nth-child(5),
 td:nth-child(4) {
