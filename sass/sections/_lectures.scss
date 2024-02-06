@@ -8,6 +8,10 @@
   }
 
   .lectures {
+    max-height: 85vh;
+    overflow: scroll;
+    scrollbar-width: none;
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
