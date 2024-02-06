@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'responsive';
 
 button {
   cursor: pointer;
@@ -11,6 +12,9 @@ button {
   width: 100%;
   padding: 0.5rem 3rem;
   border-radius: 1.5rem;
+  @include phone-only {
+    padding: 0.5rem;
+  }
 }
 
 .btn-large {
@@ -25,6 +29,10 @@ button {
   display: inline-block;
   width: 60px;
   height: 34px;
+  @include phone-only {
+    width: 50px;
+    height: 26px;
+  }
 
   input {
     opacity: 0;
@@ -52,6 +60,13 @@ button {
       background-color: $clr-white;
       -webkit-transition: 0.4s;
       transition: 0.4s;
+
+      @include phone-only {
+        height: 22px;
+        width: 22px;
+        left: 1px;
+        bottom: 2px;
+      }
     }
   }
 
