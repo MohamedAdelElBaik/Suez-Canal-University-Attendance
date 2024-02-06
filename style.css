@@ -724,7 +724,7 @@ tfoot {
 }
 /* font-families */
 .container--lectures {
-  padding: 2rem 2rem 0.3rem 2rem;
+  padding: 2rem 0.5rem 0.3rem 0.5rem;
 }
 @media (max-width: 899px) {
   .container--lectures {
@@ -1012,7 +1012,7 @@ tfoot {
 /* ------------ sections container ----------------- */
 .container {
   display: grid;
-  grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(500px, 1fr);
+  grid-template-columns: clamp(260px, 18vw, 300px) clamp(280px, 20vw, 320px) minmax(500px, 1fr);
   grid-template-rows: 100vh;
   grid-template-rows: 100dvh;
 }

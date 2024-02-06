@@ -2,7 +2,7 @@
 @import '../responsive';
 
 .container--lectures {
-  padding: 2rem 2rem 0.3rem 2rem;
+  padding: 2rem 0.5rem 0.3rem 0.5rem;
   @include tablet-portrait {
     padding: 1rem 0.5rem;
   }

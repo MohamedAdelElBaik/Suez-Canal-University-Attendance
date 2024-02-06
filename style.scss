@@ -10,7 +10,7 @@
 /* ------------ sections container ----------------- */
 .container {
   display: grid;
-  grid-template-columns: minmax(200px, 300px) minmax(300px, 370px) minmax(
+  grid-template-columns: clamp(260px, 18vw, 300px) clamp(280px, 20vw, 320px) minmax(
       500px,
       1fr
     );
