@@ -1,18 +1,48 @@
 @import '../variables';
+@import '../responsive';
 
 .container--attendances {
   header {
     .lec-info {
       padding: 2rem 2.5rem;
 
+      @include phone-only {
+        align-items: start;
+        justify-content: space-between;
+        padding: 0.75rem;
+      }
+
+      h1 {
+        @include phone-only {
+          font-size: $fs-400;
+        }
+      }
+
       .description {
         margin-top: 1rem;
+        @include phone-only {
+          margin-top: 0.2rem;
+          font-size: $fs-300;
+        }
       }
 
       .date {
         margin: auto;
+
+        @include phone-only {
+          margin: 0;
+        }
+
+        h2 {
+          @include phone-only {
+            font-size: $fs-300;
+          }
+        }
         span {
           font-weight: 400;
+          @include phone-only {
+            font-size: $fs-200;
+          }
         }
       }
     }
@@ -26,11 +56,21 @@
       gap: 2rem;
       grid-template-columns: repeat(3, minmax(200px, 250px));
       // grid-template-rows: repeat(2, 80px);
-      grid-template-areas: 'img btnMax btnUpload' 'img btnActivate date ';
+      grid-template-areas: 'img btnMax btnUpload' 'img btnActivate date';
       margin-bottom: 2rem;
+
+      @include phone-only {
+        gap: 0.75rem;
+        grid-template-columns: minmax(10px, 170px) 1fr;
+        grid-template-areas: 'img btnMax' 'img btnUpload' 'img date' 'img btnActivate';
+      }
 
       &--img {
         margin-inline: 2rem;
+        @include phone-only {
+          margin-inline: 0;
+          // align-self: s;
+        }
         grid-area: img;
       }
       &--max {
@@ -41,20 +81,47 @@
       }
       &--max,
       &--upload {
-        align-self: flex-end;
         height: 50px;
+        align-self: flex-end;
+
+        @include phone-only {
+          height: 40px;
+          font-size: $fs-200;
+          align-self: flex-start;
+        }
       }
       &--activate {
         grid-area: btnActivate;
+
+        @include phone-only {
+          gap: 0.5rem;
+          justify-self: center;
+        }
+        span {
+          @include phone-only {
+            font-size: $fs-200;
+          }
+        }
       }
       &--date {
         grid-area: date;
+
+        h3 {
+          @include phone-only {
+            display: none;
+          }
+        }
 
         input {
           font-size: $fs-600;
           font-weight: 800;
           text-align: center;
           outline-color: $clr-primary;
+
+          @include phone-only {
+            font-size: $fs-300;
+            font-weight: 600;
+          }
         }
       }
     }
@@ -63,6 +130,9 @@
   .lec-table {
     .header {
       text-align: center;
+      @include phone-only {
+        font-size: $fs-400;
+      }
     }
   }
 }
