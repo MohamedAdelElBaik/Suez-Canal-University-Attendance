@@ -1,10 +1,19 @@
 @import '../variables';
+@import '../responsive';
 
 .container--lectures {
   padding: 2rem;
+  @include phone-only {
+    padding: 1rem 0.5rem;
+  }
+
   h1 {
     text-align: center;
     margin-bottom: 2rem;
+
+    @include phone-only {
+      display: none;
+    }
   }
 
   .lectures {
@@ -12,10 +21,18 @@
     overflow: scroll;
     scrollbar-width: none;
 
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+
+    @include phone-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      // width: 100%;
+      overflow: scroll;
+    }
 
     &--card,
     .general {
@@ -37,6 +54,16 @@
       cursor: pointer;
       transition: background-color 700ms ease;
 
+      @include phone-only {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        width: 80px;
+        text-align: center;
+        height: 35px;
+        padding: 0.3rem;
+      }
+
       &:hover,
       &.active {
         background-color: $clr-gray;
@@ -45,12 +72,22 @@
       h2 {
         font-size: $fs-700;
         font-weight: 700;
+        @include phone-only {
+          display: inline;
+          font-size: $fs-200;
+        }
       }
       .number {
         font-size: $fs-800;
         font-weight: 700;
         line-height: 40px;
         display: block;
+
+        @include phone-only {
+          display: inline;
+          font-size: $fs-200;
+          line-height: 10px;
+        }
       }
 
       .date {
@@ -58,6 +95,9 @@
         direction: ltr; // the text is ordered arabic way so I do this to avoid these behaver
         margin-top: 1.5rem;
         font-weight: 600;
+        @include phone-only {
+          display: none;
+        }
       }
     }
   }
