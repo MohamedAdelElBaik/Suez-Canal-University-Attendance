@@ -5,6 +5,7 @@
 @use 'sass/sections/lectures';
 @use 'sass/sections/attendances';
 @import 'sass/variables';
+@import 'sass/responsive';
 
 /* ------------ sections container ----------------- */
 .container {
@@ -14,4 +15,9 @@
       500px,
       1fr
     );
+
+  @include phone-only {
+    display: flex;
+    flex-direction: column;
+  }
 }
