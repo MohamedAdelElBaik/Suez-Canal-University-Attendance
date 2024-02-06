@@ -1,4 +1,5 @@
 @import './variables';
+@import './responsive';
 
 table,
 th,
@@ -16,6 +17,13 @@ table {
 
 caption {
   margin-bottom: 1rem;
+}
+
+th,
+td {
+  @include phone-only {
+    font-size: $fs-200;
+  }
 }
 
 td:nth-child(1),
