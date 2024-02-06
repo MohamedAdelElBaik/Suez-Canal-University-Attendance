@@ -1,3 +1,5 @@
+@import './responsive';
+
 /* Colors */
 $clr-primary: #0468bf;
 $clr-light: #c4dcf0;
@@ -14,6 +16,18 @@ $fs-500: 1.15rem;
 $fs-400: 1rem;
 $fs-300: 0.875rem;
 $fs-200: 0.7rem;
+
+// not work
+@include phone-only {
+  $fs-900: 1.5rem;
+  $fs-800: 1.15rem;
+  $fs-700: 1rem;
+  $fs-600: 0.875rem;
+  $fs-500: 0.875rem;
+  $fs-400: 0.7rem;
+  $fs-300: 0.6rem;
+  $fs-200: 0.6rem;
+}
 
 /* font-families */
 $ff-sans: 'Cairo', sans-serif;
