@@ -38,7 +38,7 @@
       <section class="container--lectures bg-light text-dark">
         <h1 id="subject-title" class="fs-800">تركيبات هندسية</h1>
         <div class="lectures">
-          <div class="general fs-600">نظرة عامة</div>
+          <!-- <div class="general fs-600">نظرة عامة</div> -->
           <!-- <div class="lectures--card">
             <h2>المحاضرة</h2>
             <span class="number">01</span>
@@ -67,32 +67,33 @@
           <hr />
         </header>
         <section class="lec-control">
-          <div class="lec-control--box flex gap-lg">
-            <div class="img">
+          <div class="lec-control--box">
+            <div class="lec-control--box--img">
               <img src="/images/QR.png" alt="qr for Attendance" />
             </div>
 
-            <div class="setting flex-column gap-lg">
-              <div class="flex gap-md">
-                <button class="btn-large bg-primary text-white border-none">
-                  تكبير الصورة
-                </button>
-                <button class="btn-large">تحميل الصورة</button>
-              </div>
+            <button
+              class="lec-control--box--max btn-large bg-primary text-white border-none"
+            >
+              تكبير الصورة
+            </button>
+            <button class="lec-control--box--upload btn-large bg-white">
+              تحميل الصورة
+            </button>
 
-              <div class="flex gap-lg">
-                <div class="flex gap-md activate-attendance">
-                  <label class="switch">
-                    <input type="checkbox" checked />
-                    <span class="slider round"></span>
-                  </label>
-                  <span class="fs-700 fw-800">تفعيل الحضور</span>
-                </div>
-                <div class="flex-column gap-md">
-                  <h3 class="fs-600">تاريخ المحاضرة</h3>
-                  <input type="date" value="2024-12-20" />
-                </div>
+            <div class="lec-control--box--activate flex gap-md">
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
               </div>
+              <span class="fs-700 fw-800">تفعيل الحضور</span>
+            </div>
+
+            <div class="lec-control--box--date flex-column gap-md">
+              <h3 class="fs-600">تاريخ المحاضرة</h3>
+              <input class="btn-large" type="date" value="2024-12-20" />
             </div>
           </div>
           <hr />

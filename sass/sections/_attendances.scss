@@ -22,11 +22,40 @@
     margin: 2rem;
 
     &--box {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(200px, 250px));
+      // grid-template-rows: repeat(2, 80px);
+      grid-template-areas: 'img btnMax btnUpload' 'img btnActivate date ';
       margin-bottom: 2rem;
 
-      .img {
-        width: 200px;
+      &--img {
         margin-inline: 2rem;
+        grid-area: img;
+      }
+      &--max {
+        grid-area: btnMax;
+      }
+      &--upload {
+        grid-area: btnUpload;
+      }
+      &--max,
+      &--upload {
+        align-self: flex-end;
+        height: 50px;
+      }
+      &--activate {
+        grid-area: btnActivate;
+      }
+      &--date {
+        grid-area: date;
+
+        input {
+          font-size: $fs-600;
+          font-weight: 800;
+          text-align: center;
+          outline-color: $clr-primary;
+        }
       }
     }
   }

@@ -504,6 +504,7 @@ tfoot {
 .container--subjects header .logo img {
   background-color: white;
   border-radius: 100%;
+  margin-right: 1rem;
 }
 .container--subjects header .professor-info {
   text-align: center;
@@ -556,6 +557,9 @@ tfoot {
   margin-bottom: 2rem;
 }
 .container--lectures .lectures {
+  max-height: 85vh;
+  overflow: scroll;
+  scrollbar-width: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -618,11 +622,37 @@ tfoot {
   margin: 2rem;
 }
 .container--attendances .lec-control--box {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(200px, 250px));
+  grid-template-areas: "img btnMax btnUpload" "img btnActivate date ";
   margin-bottom: 2rem;
 }
-.container--attendances .lec-control--box .img {
-  width: 200px;
+.container--attendances .lec-control--box--img {
   margin-inline: 2rem;
+  grid-area: img;
+}
+.container--attendances .lec-control--box--max {
+  grid-area: btnMax;
+}
+.container--attendances .lec-control--box--upload {
+  grid-area: btnUpload;
+}
+.container--attendances .lec-control--box--max, .container--attendances .lec-control--box--upload {
+  align-self: flex-end;
+  height: 50px;
+}
+.container--attendances .lec-control--box--activate {
+  grid-area: btnActivate;
+}
+.container--attendances .lec-control--box--date {
+  grid-area: date;
+}
+.container--attendances .lec-control--box--date input {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-align: center;
+  outline-color: #0468bf;
 }
 .container--attendances .lec-table .header {
   text-align: center;
