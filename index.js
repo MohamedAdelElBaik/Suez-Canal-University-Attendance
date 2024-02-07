@@ -60,6 +60,11 @@ $('document').ready(function () {
       addAttendanceDataToTable(attendanceArrSlice());
     }
   });
+
+  $('#btnUser').click(function () {
+    $('.container--subjects').toggleClass('active');
+    // $('#userImg').css('display', 'none');
+  });
 });
 
 function getSelectedLecturesData() {
