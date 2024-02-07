@@ -483,6 +483,24 @@ button {
   border-radius: 50%;
 }
 
+/* collapse button for lectures section */
+#collapseBtn {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  z-index: 5;
+  color: red;
+  font-size: var(--fs-800);
+  font-weight: 800;
+  cursor: pointer;
+}
+@media (max-width: 899px) {
+  #collapseBtn {
+    right: 45%;
+    top: 100%;
+  }
+}
+
 /* Colors */
 :root {
   --fs-900: 5rem;
@@ -596,22 +614,35 @@ tfoot {
   gap: 1rem;
   justify-items: start;
   box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
+  /* subject nav style in tablet or bellow screens (hide until .active) */
+  /* show subject nav */
 }
 @media (max-width: 899px) {
   .container--subjects {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     bottom: 0;
     z-index: 101;
-    width: 0;
-    overflow: hidden;
-    transition: width 500ms linear;
+    width: 60vw;
+    transition: left 500ms linear 50ms;
+    /* to add nice animation to hide content when subject nav disappear */
+  }
+  .container--subjects .subject--header .logo,
+  .container--subjects .subject--list,
+  .container--subjects .subject--buttons-box {
+    transition: opacity 300ms linear;
+    opacity: 0;
   }
 }
 @media (max-width: 899px) {
   .container--subjects.active {
-    width: 60vw;
+    left: 0;
+  }
+  .container--subjects.active .subject--header .logo,
+  .container--subjects.active .subject--list,
+  .container--subjects.active .subject--buttons-box {
+    opacity: 1;
   }
 }
 
@@ -718,6 +749,10 @@ tfoot {
     width: 50px;
   }
 }
+.xxx > *:not(#ww) {
+  visibility: hidden;
+}
+
 /* Colors */
 :root {
   --fs-900: 5rem;
@@ -744,12 +779,36 @@ tfoot {
 }
 /* font-families */
 .container--lectures {
+  position: relative;
   padding: 2rem 0.5rem 0.3rem 0.5rem;
+  /* Note: collapse btn style in buttons file */
+  /* when section collapse, except number of lectures hide come all content to fit in small width of section */
 }
 @media (max-width: 899px) {
   .container--lectures {
     padding: 1rem 0.5rem;
   }
+}
+.container--lectures.nav-collapse-opacity h1,
+.container--lectures.nav-collapse-opacity h2,
+.container--lectures.nav-collapse-opacity .date {
+  display: none !important;
+}
+.container--lectures.nav-collapse-opacity .lectures--card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 599px) {
+  .container--lectures.nav-collapse-opacity .lectures--card {
+    display: none;
+  }
+}
+.container--lectures.nav-collapse-opacity .lectures--card .number {
+  font-size: var(--fs-500);
 }
 .container--lectures h1 {
   text-align: center;
@@ -1033,8 +1092,13 @@ tfoot {
 .container {
   display: grid;
   grid-template-columns: clamp(260px, 18vw, 300px) clamp(280px, 20vw, 320px) minmax(500px, 1fr);
-  grid-template-rows: 100vh;
+  grid-template-rows: 100vh; /* to not supported browsers (dvh) */
   grid-template-rows: 100dvh;
+  transition: grid-template-columns 150ms linear;
+  /* to collapse lectures section (made the columns width smaller) */
+}
+.container.collapse {
+  grid-template-columns: clamp(260px, 18vw, 300px) 70px minmax(500px, 1fr);
 }
 @media (max-width: 899px) {
   .container {

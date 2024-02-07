@@ -93,3 +93,20 @@ button {
     }
   }
 }
+
+/* collapse button for lectures section */
+#collapseBtn {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  z-index: 5;
+  color: red;
+  font-size: $fs-800;
+  font-weight: 800;
+  cursor: pointer;
+
+  @include tablet-portrait {
+    right: 45%;
+    top: 100%;
+  }
+}

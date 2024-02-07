@@ -63,7 +63,11 @@ $('document').ready(function () {
 
   $('#btnUser').click(function () {
     $('.container--subjects').toggleClass('active');
-    // $('#userImg').css('display', 'none');
+  });
+
+  $('#collapseBtn').click(function () {
+    $('.container').toggleClass('collapse');
+    $('.container--lectures').toggleClass('nav-collapse-opacity');
   });
 });
 

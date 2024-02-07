@@ -2,9 +2,36 @@
 @import '../responsive';
 
 .container--lectures {
+  position: relative;
   padding: 2rem 0.5rem 0.3rem 0.5rem;
   @include tablet-portrait {
     padding: 1rem 0.5rem;
+  }
+
+  /* Note: collapse btn style in buttons file */
+  /* when section collapse, except number of lectures hide come all content to fit in small width of section */
+  &.nav-collapse-opacity {
+    h1,
+    h2,
+    .date {
+      display: none !important;
+    }
+    .lectures--card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      width: 50px;
+      height: 50px;
+
+      @include phone {
+        display: none;
+      }
+
+      .number {
+        font-size: $fs-500;
+      }
+    }
   }
 
   h1 {

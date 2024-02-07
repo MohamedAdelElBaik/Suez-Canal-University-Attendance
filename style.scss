@@ -14,8 +14,14 @@
       500px,
       1fr
     );
-  grid-template-rows: 100vh;
+  grid-template-rows: 100vh; /* to not supported browsers (dvh) */
   grid-template-rows: 100dvh;
+  transition: grid-template-columns 150ms linear;
+
+  /* to collapse lectures section (made the columns width smaller) */
+  &.collapse {
+    grid-template-columns: clamp(260px, 18vw, 300px) 70px minmax(500px, 1fr);
+  }
 
   @include tablet-portrait {
     display: flex;
