@@ -17,24 +17,35 @@
         <img id="btnUser" src="/images/professor.png" alt="professor" />
       </header>
       <section class="container--subjects bg-primary text-white">
-        <header>
+        <header class="subject--header">
           <div class="logo">
-            <img src="/images/SCUIcon.png" alt="all subjects" width="60" />
-            <h1 class="fs-600">تسجيل الحضور</h1>
+            <img
+              class="logo--img"
+              src="/images/SCUIcon.png"
+              alt="all subjects"
+              width="60"
+            />
+            <h1 class="logo--title fs-600">تسجيل الحضور</h1>
           </div>
           <div class="professor-info">
-            <img src="/images/professor.png" alt="professor" />
-            <h2 class="fs-500">د. خالد توفيق</h2>
+            <img
+              class="professor-info--img"
+              src="/images/professor.png"
+              alt="professor"
+            />
+            <h2 class="professor-info--title fs-500">د. خالد توفيق</h2>
           </div>
         </header>
-        <div class="list-container">
+        <div class="list-container subject--list">
           <div class="header">
             <img src="/images/bookIcon.png" alt="all subjects" width="40" />
             <h2 class="fs-500">جميع المواد</h2>
           </div>
-          <ul role="list" class="list"></ul>
+          <ul role="list" class="list">
+            <!-- <li data-id="${sub.id}" class="list--item active">sub Name</li> -->
+          </ul>
         </div>
-        <div class="buttons-box">
+        <div class="subject--buttons-box">
           <button id="addSubject" class="btn">اضافة مادة</button>
           <button id="signOutBtn" class="btn">تسجيل الخروج</button>
         </div>
