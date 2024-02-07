@@ -41,15 +41,28 @@
     &--box {
       display: grid;
       gap: 2rem;
-      grid-template-columns: repeat(3, minmax(200px, 250px));
-      // grid-template-rows: repeat(2, 80px);
+      grid-template-columns: repeat(3, minmax(180px, 250px));
       grid-template-areas: 'img btnMax btnUpload' 'img btnActivate date';
       margin-bottom: 2rem;
+
+      @media (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          'img btnMax '
+          'img btnUpload'
+          'img btnActivate'
+          'img date';
+      }
+      @media (max-width: 950px) {
+        grid-template-areas:
+          'img btnMax '
+          'img btnUpload'
+          ' btnActivate date';
+      }
 
       @include tablet-portrait {
         gap: 1.5rem;
         grid-template-columns: minmax(120px, 170px) 1fr 1fr;
-        // grid-template-columns: minmax(170px, 250px) 1fr;
         grid-template-areas: 'img btnMax' 'img btnUpload' 'img date' 'img btnActivate';
       }
 
