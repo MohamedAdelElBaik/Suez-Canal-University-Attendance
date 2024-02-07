@@ -4,6 +4,7 @@
 .container--lectures {
   position: relative;
   padding: 2rem 0.5rem 0.3rem 0.5rem;
+
   @include tablet-portrait {
     padding: 1rem 0.5rem;
   }
@@ -34,7 +35,7 @@
     }
   }
 
-  h1 {
+  #subject-title {
     text-align: center;
     margin-bottom: 2rem;
 
@@ -42,102 +43,101 @@
       display: none;
     }
   }
+}
 
-  .lectures {
-    max-height: 88vh;
+.lectures {
+  max-height: 88vh;
+  overflow: scroll;
+  scrollbar-width: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+
+  @include tablet-portrait {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     overflow: scroll;
-    scrollbar-width: none;
+  }
 
-    display: inline-flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    align-items: center;
+  &--card,
+  .general {
+    width: 70%;
+    background-color: $clr-white;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+  }
+
+  .general {
+    padding: 0.75rem 0;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &--card {
+    padding: 1rem 1.5rem;
+    height: 180px;
+    cursor: pointer;
+    transition: background-color 700ms ease;
 
     @include tablet-portrait {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      overflow: scroll;
-    }
-
-    &--card,
-    .general {
-      width: 70%;
-      background-color: $clr-white;
-      border-radius: 0.5rem;
-      border: 1px solid gray;
-    }
-
-    .general {
-      padding: 0.75rem 0;
+      align-items: center;
+      width: fit-content;
       text-align: center;
-      font-weight: 700;
+      height: fit-content;
+      padding: 0.3rem;
     }
 
-    &--card {
-      padding: 1rem 1.5rem;
-      height: 180px;
-      cursor: pointer;
-      transition: background-color 700ms ease;
+    @include phone {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    &:hover,
+    &.active {
+      background-color: $clr-gray;
+    }
+
+    .title {
+      font-size: $fs-800;
+      font-weight: 700;
+      @include tablet-portrait {
+        font-size: $fs-600;
+        display: inline;
+        font-weight: 600;
+      }
+    }
+    .number {
+      font-size: $fs-800;
+      font-weight: 700;
+      line-height: 40px;
+      display: block;
 
       @include tablet-portrait {
-        align-items: center;
-        width: fit-content;
-        text-align: center;
-        height: fit-content;
-        padding: 0.3rem;
-      }
-
-      @include phone {
-        display: flex;
-        gap: 0.5rem;
-      }
-
-      &:hover,
-      &.active {
-        background-color: $clr-gray;
-      }
-
-      h2 {
-        font-size: $fs-800;
-        font-weight: 700;
-        @include tablet-portrait {
-          font-size: $fs-600;
-          display: inline;
-          font-weight: 600;
-        }
-      }
-      .number {
-        font-size: $fs-800;
-        font-weight: 700;
-        line-height: 40px;
-        display: block;
-
-        @include tablet-portrait {
-          font-size: $fs-600;
-          display: inline;
-          font-weight: 600;
-          // font-size: $fs-500;
-        }
-        @include phone {
-          // font-size: $fs-200;
-          line-height: 10px;
-        }
-      }
-
-      .date {
-        display: inline-block;
-        direction: ltr; // the text is ordered arabic way so I do this to avoid these behaver
-        margin-top: 1.5rem;
+        font-size: $fs-600;
+        display: inline;
         font-weight: 600;
-        @include tablet-portrait {
-          display: block;
-          margin-top: 0;
-        }
-        @include phone {
-          display: none;
-        }
+        // font-size: $fs-500;
+      }
+      @include phone {
+        // font-size: $fs-200;
+        line-height: 10px;
+      }
+    }
+
+    .date {
+      display: inline-block;
+      direction: ltr; // the text is ordered arabic way so I do this to avoid these behaver
+      margin-top: 1.5rem;
+      font-weight: 600;
+      @include tablet-portrait {
+        display: block;
+        margin-top: 0;
+      }
+      @include phone {
+        display: none;
       }
     }
   }

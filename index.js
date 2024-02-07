@@ -101,7 +101,7 @@ function addLecturesDataToLectures() {
       `<div data-id="${lec.id}" class="lectures--card ${
         index === 0 ? 'active' : ''
       }">
-        <h2>المحاضرة</h2>
+        <h2 class="title">المحاضرة</h2>
         <span class="number">0${lec.id}</span>
         <div><span class="date">${lec.date}</span></div>
       </div>`
