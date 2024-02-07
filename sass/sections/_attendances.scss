@@ -3,6 +3,7 @@
 
 .container--attendances {
   overflow: scroll;
+  container-type: inline-size;
 
   header {
     .lec-info {
@@ -45,21 +46,13 @@
       grid-template-areas: 'img btnMax btnUpload' 'img btnActivate date';
       margin-bottom: 2rem;
 
-      @media (max-width: 1100px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-          'img btnMax '
-          'img btnUpload'
-          'img btnActivate'
-          'img date';
-      }
-      @media (max-width: 950px) {
+      @container (max-width : 700px) and (min-width : 520px) {
+        grid-template-columns: repeat(2, minmax(100px, 200px));
         grid-template-areas:
           'img btnMax '
           'img btnUpload'
           ' btnActivate date';
       }
-
       @include tablet-portrait {
         gap: 1.5rem;
         grid-template-columns: minmax(120px, 170px) 1fr 1fr;
@@ -70,11 +63,6 @@
         gap: 0.75rem;
         grid-template-columns: minmax(120px, 170px) 1fr;
       }
-      // @include tablet-portrait {
-      //   gap: 1.5rem;
-      //         grid-template-columns: repeat(3, minmax(200px, 250px));
-
-      // }
 
       &--img {
         margin-inline: 2rem;
