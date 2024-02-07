@@ -371,6 +371,10 @@ button {
   border: none !important;
 }
 
+.display-none {
+  display: none;
+}
+
 /* Colors */
 :root {
   --fs-900: 5rem;
@@ -624,7 +628,7 @@ tfoot {
     top: 0;
     left: -100%;
     bottom: 0;
-    z-index: 101;
+    z-index: 98;
     width: 60vw;
     transition: left 500ms linear 50ms;
     /* to add nice animation to hide content when subject nav disappear */
@@ -732,7 +736,7 @@ tfoot {
     height: 60px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 89;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -948,6 +952,7 @@ tfoot {
 /* font-families */
 .container--attendances {
   overflow: scroll;
+  container-type: inline-size;
 }
 .container--attendances header .lec-info {
   padding: 2rem 2.5rem;
@@ -988,14 +993,9 @@ tfoot {
   grid-template-areas: "img btnMax btnUpload" "img btnActivate date";
   margin-bottom: 2rem;
 }
-@media (max-width: 1100px) {
+@container (max-width : 700px) and (min-width : 520px) {
   .container--attendances .lec-control--box {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "img btnMax " "img btnUpload" "img btnActivate" "img date";
-  }
-}
-@media (max-width: 950px) {
-  .container--attendances .lec-control--box {
+    grid-template-columns: repeat(2, minmax(100px, 200px));
     grid-template-areas: "img btnMax " "img btnUpload" " btnActivate date";
   }
 }
@@ -1071,6 +1071,33 @@ tfoot {
   .container--attendances .lec-table .header {
     font-size: var(--fs-400);
   }
+}
+
+#maxImg {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
+  z-index: 100;
+  margin: auto;
+  aspect-ratio: 1;
+  max-height: 80%;
+}
+#maxImg.hidden {
+  display: none;
+}
+
+#shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 99;
 }
 
 /* Colors */

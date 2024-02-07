@@ -69,6 +69,30 @@ $('document').ready(function () {
     $('.container').toggleClass('collapse');
     $('.container--lectures').toggleClass('nav-collapse-opacity');
   });
+
+  $('#maximizeImg').click(function () {
+    $('#maxImg').removeClass('hidden');
+    $('#shadow').removeClass('display-none');
+  });
+  $('#shadow').click(function () {
+    $('#maxImg').addClass('hidden');
+    $(this).addClass('display-none');
+  });
+  $('#downloadImg').click(function () {
+    imageUrl = $('#tessst').attr('src');
+
+    // Create a temporary anchor element
+    var downloadLink = $('<a>')
+      .attr('href', imageUrl)
+      .attr('download', 'downloaded_image.jpg')
+      .appendTo('body');
+
+    // Trigger a click on the anchor element to initiate the download
+    downloadLink[0].click();
+
+    // Remove the temporary anchor element
+    downloadLink.remove();
+  });
 });
 
 function getSelectedLecturesData() {
