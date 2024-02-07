@@ -8,20 +8,34 @@
   justify-items: start;
   box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
 
+  /* subject nav style in tablet or bellow screens (hide until .active) */
   @include tablet-portrait {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     bottom: 0;
     z-index: 101;
+    width: 60vw;
+    transition: left 500ms linear 50ms;
 
-    width: 0;
-    overflow: hidden;
-    transition: width 500ms linear;
+    /* to add nice animation to hide content when subject nav disappear */
+    .subject--header .logo,
+    .subject--list,
+    .subject--buttons-box {
+      transition: opacity 300ms linear;
+      opacity: 0;
+    }
   }
+  /* show subject nav */
   &.active {
     @include tablet-portrait {
-      width: 60vw;
+      left: 0;
+
+      .subject--header .logo,
+      .subject--list,
+      .subject--buttons-box {
+        opacity: 1;
+      }
     }
   }
 }
@@ -132,5 +146,11 @@
     top: 3px;
     left: 5px;
     width: 50px;
+  }
+}
+
+.xxx {
+  > *:not(#ww) {
+    visibility: hidden;
   }
 }
