@@ -83,15 +83,19 @@
         <section class="lec-control">
           <div class="lec-control--box">
             <div class="lec-control--box--img">
-              <img src="/images/QR.png" alt="qr for Attendance" />
+              <img id="tessst" src="/images/QR.png" alt="qr for Attendance" />
             </div>
 
             <button
+              id="maximizeImg"
               class="lec-control--box--max btn-large bg-primary text-white border-none"
             >
               تكبير الصورة
             </button>
-            <button class="lec-control--box--upload btn-large bg-white">
+            <button
+              id="downloadImg"
+              class="lec-control--box--upload btn-large bg-white"
+            >
               تحميل الصورة
             </button>
 
@@ -106,7 +110,7 @@
             </div>
 
             <div class="lec-control--box--date flex-column gap-md">
-              <h3 class="fs-600">تاريخ المحاضرة</h3>
+              <!-- <h3 class="fs-600">تاريخ المحاضرة</h3> -->
               <input class="btn-large" type="date" value="2024-12-20" />
             </div>
           </div>
@@ -139,6 +143,12 @@
           </table>
         </section>
       </section>
+      <div>
+        <div id="maxImg" class="hidden">
+          <img src="/images/QR.png" alt="qr for Attendance" />
+        </div>
+        <span class="display-none" id="shadow"></span>
+      </div>
     </main>
     <script src="jQuery/jquery.js" type="text/javascript"></script>
     <script src="jQuery/jquery-ui/jquery-ui.js" type="text/javascript"></script>
