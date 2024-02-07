@@ -9,9 +9,21 @@
     padding: 1rem 0.5rem;
   }
 
+  #collapseBtn .left {
+    display: none;
+  }
+  #collapseBtn .right {
+    display: inline;
+  }
   /* Note: collapse btn style in buttons file */
   /* when section collapse, except number of lectures hide come all content to fit in small width of section */
   &.nav-collapse-opacity {
+    #collapseBtn .right {
+      display: none;
+    }
+    #collapseBtn .left {
+      display: inline;
+    }
     @include tablet-landscape {
       h1,
       h2,

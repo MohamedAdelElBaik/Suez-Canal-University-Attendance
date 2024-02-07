@@ -488,7 +488,8 @@ button {
 }
 
 /* collapse button for lectures section */
-#collapseBtn {
+#collapseBtn .left,
+#collapseBtn .right {
   position: absolute;
   right: 100%;
   top: 50%;
@@ -504,6 +505,20 @@ button {
     right: 45%;
     top: 100%;
   }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-0.4em);
+    opacity: 0.9;
+  }
+}
+.animate-arrow {
+  animation: arrow 0.6s infinite alternate ease-in-out;
 }
 
 /* Colors */
@@ -793,6 +808,18 @@ tfoot {
   .container--lectures {
     padding: 1rem 0.5rem;
   }
+}
+.container--lectures #collapseBtn .left {
+  display: none;
+}
+.container--lectures #collapseBtn .right {
+  display: inline;
+}
+.container--lectures.nav-collapse-opacity #collapseBtn .right {
+  display: none;
+}
+.container--lectures.nav-collapse-opacity #collapseBtn .left {
+  display: inline;
 }
 @media (min-width: 900px) {
   .container--lectures.nav-collapse-opacity h1,
