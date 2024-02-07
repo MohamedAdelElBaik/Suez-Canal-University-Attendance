@@ -106,6 +106,7 @@ button {
   cursor: pointer;
 
   @include tablet-portrait {
+    display: none; /* disable collapse button for now (will do it latter) */
     right: 45%;
     top: 100%;
   }
