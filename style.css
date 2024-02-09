@@ -1213,12 +1213,6 @@ tfoot {
   width: 100%;
 }
 
-.ui-widget-overlay {
-  opacity: 0.5 !important; /* Make sure to change both of these, as IE only sees the second one */
-  filter: Alpha(Opacity=50) !important;
-  background: rgb(50, 50, 50) !important; /* This will make it darker */
-}
-
 /* ------------ sections container ----------------- */
 .container {
   display: grid;

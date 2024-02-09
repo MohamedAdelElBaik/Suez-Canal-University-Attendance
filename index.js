@@ -71,12 +71,12 @@ $('document').ready(function () {
   });
 
   $('#maximizeImg').click(function () {
-    $('#maxImg').removeClass('hidden');
-    $('#shadow').removeClass('display-none');
+    $('#maxImg').show('fold', {}, 500);
+    $('#shadow').show('fold', {}, 350);
   });
   $('#shadow').click(function () {
-    $('#maxImg').addClass('hidden');
-    $(this).addClass('display-none');
+    $('#maxImg').hide('fold', {}, 350);
+    $(this).hide('fold', {}, 350);
   });
   $('#downloadImg').click(function () {
     imageUrl = $('#tessst').attr('src');
@@ -102,12 +102,17 @@ $('document').ready(function () {
     modal: true,
     draggable: false,
     resizable: false,
+    hide: 'fade',
+    show: 'fade',
+    duration: 350,
   });
   $('#closeDialog').click(function () {
     $('#dialog').dialog('close');
+    $('#shadow').hide('fold', {}, 350);
   });
   $('#addSubject').click(function () {
     $('#dialog').dialog('open');
+    $('#shadow').show('fold', {}, 350);
   });
 });
 

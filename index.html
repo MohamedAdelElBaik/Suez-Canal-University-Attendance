@@ -173,10 +173,11 @@
         </section>
       </section>
       <div>
-        <div id="maxImg" class="hidden">
+        <!-- I use show jQuery UI so for best practice add display none instead of using hide method because it show for seconds before javascript loaded -->
+        <div id="maxImg" style="display: none">
           <img src="/images/QR.png" alt="qr for Attendance" />
         </div>
-        <span class="display-none" id="shadow"></span>
+        <span id="shadow" style="display: none"></span>
       </div>
     </main>
     <footer>
