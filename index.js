@@ -93,6 +93,22 @@ $('document').ready(function () {
     // Remove the temporary anchor element
     downloadLink.remove();
   });
+
+  $('#dialog').click(function (e) {
+    e.preventDefault();
+  });
+  $('#dialog').dialog({
+    autoOpen: false,
+    modal: true,
+    draggable: false,
+    resizable: false,
+  });
+  $('#closeDialog').click(function () {
+    $('#dialog').dialog('close');
+  });
+  $('#addSubject').click(function () {
+    $('#dialog').dialog('open');
+  });
 });
 
 function getSelectedLecturesData() {
