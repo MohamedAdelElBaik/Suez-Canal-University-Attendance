@@ -6,7 +6,6 @@
   flex-direction: column;
   gap: 1rem;
   justify-items: start;
-  box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
 
   /* subject nav style in tablet or bellow screens (hide until .active) */
   @include tablet-portrait {
