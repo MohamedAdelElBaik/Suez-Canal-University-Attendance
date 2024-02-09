@@ -854,387 +854,6 @@
             "level": 3
           }
         ]
-      },
-      {
-        "id": "5",
-        "title": "5 تركيبات هندسية",
-        "description": "محاضرة مهمة 5",
-        "date": "2024-01-05",
-        "attendance": [
-          {
-            "id": 99,
-            "fullName": "Ingunna Byas",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 2
-          },
-          {
-            "id": 100,
-            "fullName": "Robb Sommerly",
-            "status": false,
-            "department": "Electrical Engineering",
-            "level": 3
-          },
-          {
-            "id": 101,
-            "fullName": "Berni Hundell",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 1
-          },
-          {
-            "id": 102,
-            "fullName": "Deloris Hostan",
-            "status": true,
-            "department": "Civil Engineering",
-            "level": 3
-          },
-          {
-            "id": 103,
-            "fullName": "Janine MacAughtrie",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 5
-          },
-          {
-            "id": 104,
-            "fullName": "Bessy Bente",
-            "status": false,
-            "department": "Industrial Engineering",
-            "level": 3
-          },
-          {
-            "id": 105,
-            "fullName": "Lucien Ewers",
-            "status": true,
-            "department": "Mechanical Engineering",
-            "level": 2
-          },
-          {
-            "id": 106,
-            "fullName": "Alaine Kerne",
-            "status": false,
-            "department": "Civil Engineering",
-            "level": 3
-          },
-          {
-            "id": 107,
-            "fullName": "Faythe Traviss",
-            "status": true,
-            "department": "Mechanical Engineering",
-            "level": 2
-          },
-          {
-            "id": 108,
-            "fullName": "Josias Dudhill",
-            "status": false,
-            "department": "Computer Engineering",
-            "level": 3
-          },
-          {
-            "id": 109,
-            "fullName": "Dael Stillert",
-            "status": false,
-            "department": "Materials Engineering",
-            "level": 1
-          },
-          {
-            "id": 110,
-            "fullName": "Peggie Korneluk",
-            "status": true,
-            "department": "Industrial Engineering",
-            "level": 3
-          },
-          {
-            "id": 111,
-            "fullName": "Roselia Reith",
-            "status": false,
-            "department": "Aerospace Engineering",
-            "level": 3
-          },
-          {
-            "id": 112,
-            "fullName": "Terrel Muino",
-            "status": true,
-            "department": "Civil Engineering",
-            "level": 2
-          },
-          {
-            "id": 113,
-            "fullName": "Anderea Maffey",
-            "status": true,
-            "department": "Materials Engineering",
-            "level": 2
-          },
-          {
-            "id": 114,
-            "fullName": "Arni Cottle",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 2
-          },
-          {
-            "id": 115,
-            "fullName": "Alric Wyllie",
-            "status": true,
-            "department": "Materials Engineering",
-            "level": 3
-          }
-        ]
-      },
-      {
-        "id": "5",
-        "title": "5 تركيبات هندسية",
-        "description": "محاضرة مهمة 5",
-        "date": "2024-01-05",
-        "attendance": [
-          {
-            "id": 99,
-            "fullName": "Ingunna Byas",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 2
-          },
-          {
-            "id": 100,
-            "fullName": "Robb Sommerly",
-            "status": false,
-            "department": "Electrical Engineering",
-            "level": 3
-          },
-          {
-            "id": 101,
-            "fullName": "Berni Hundell",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 1
-          },
-          {
-            "id": 102,
-            "fullName": "Deloris Hostan",
-            "status": true,
-            "department": "Civil Engineering",
-            "level": 3
-          },
-          {
-            "id": 103,
-            "fullName": "Janine MacAughtrie",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 5
-          },
-          {
-            "id": 104,
-            "fullName": "Bessy Bente",
-            "status": false,
-            "department": "Industrial Engineering",
-            "level": 3
-          },
-          {
-            "id": 105,
-            "fullName": "Lucien Ewers",
-            "status": true,
-            "department": "Mechanical Engineering",
-            "level": 2
-          },
-          {
-            "id": 106,
-            "fullName": "Alaine Kerne",
-            "status": false,
-            "department": "Civil Engineering",
-            "level": 3
-          },
-          {
-            "id": 107,
-            "fullName": "Faythe Traviss",
-            "status": true,
-            "department": "Mechanical Engineering",
-            "level": 2
-          },
-          {
-            "id": 108,
-            "fullName": "Josias Dudhill",
-            "status": false,
-            "department": "Computer Engineering",
-            "level": 3
-          },
-          {
-            "id": 109,
-            "fullName": "Dael Stillert",
-            "status": false,
-            "department": "Materials Engineering",
-            "level": 1
-          },
-          {
-            "id": 110,
-            "fullName": "Peggie Korneluk",
-            "status": true,
-            "department": "Industrial Engineering",
-            "level": 3
-          },
-          {
-            "id": 111,
-            "fullName": "Roselia Reith",
-            "status": false,
-            "department": "Aerospace Engineering",
-            "level": 3
-          },
-          {
-            "id": 112,
-            "fullName": "Terrel Muino",
-            "status": true,
-            "department": "Civil Engineering",
-            "level": 2
-          },
-          {
-            "id": 113,
-            "fullName": "Anderea Maffey",
-            "status": true,
-            "department": "Materials Engineering",
-            "level": 2
-          },
-          {
-            "id": 114,
-            "fullName": "Arni Cottle",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 2
-          },
-          {
-            "id": 115,
-            "fullName": "Alric Wyllie",
-            "status": true,
-            "department": "Materials Engineering",
-            "level": 3
-          }
-        ]
-      },
-      {
-        "id": "5",
-        "title": "5 تركيبات هندسية",
-        "description": "محاضرة مهمة 5",
-        "date": "2024-01-05",
-        "attendance": [
-          {
-            "id": 99,
-            "fullName": "Ingunna Byas",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 2
-          },
-          {
-            "id": 100,
-            "fullName": "Robb Sommerly",
-            "status": false,
-            "department": "Electrical Engineering",
-            "level": 3
-          },
-          {
-            "id": 101,
-            "fullName": "Berni Hundell",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 1
-          },
-          {
-            "id": 102,
-            "fullName": "Deloris Hostan",
-            "status": true,
-            "department": "Civil Engineering",
-            "level": 3
-          },
-          {
-            "id": 103,
-            "fullName": "Janine MacAughtrie",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 5
-          },
-          {
-            "id": 104,
-            "fullName": "Bessy Bente",
-            "status": false,
-            "department": "Industrial Engineering",
-            "level": 3
-          },
-          {
-            "id": 105,
-            "fullName": "Lucien Ewers",
-            "status": true,
-            "department": "Mechanical Engineering",
-            "level": 2
-          },
-          {
-            "id": 106,
-            "fullName": "Alaine Kerne",
-            "status": false,
-            "department": "Civil Engineering",
-            "level": 3
-          },
-          {
-            "id": 107,
-            "fullName": "Faythe Traviss",
-            "status": true,
-            "department": "Mechanical Engineering",
-            "level": 2
-          },
-          {
-            "id": 108,
-            "fullName": "Josias Dudhill",
-            "status": false,
-            "department": "Computer Engineering",
-            "level": 3
-          },
-          {
-            "id": 109,
-            "fullName": "Dael Stillert",
-            "status": false,
-            "department": "Materials Engineering",
-            "level": 1
-          },
-          {
-            "id": 110,
-            "fullName": "Peggie Korneluk",
-            "status": true,
-            "department": "Industrial Engineering",
-            "level": 3
-          },
-          {
-            "id": 111,
-            "fullName": "Roselia Reith",
-            "status": false,
-            "department": "Aerospace Engineering",
-            "level": 3
-          },
-          {
-            "id": 112,
-            "fullName": "Terrel Muino",
-            "status": true,
-            "department": "Civil Engineering",
-            "level": 2
-          },
-          {
-            "id": 113,
-            "fullName": "Anderea Maffey",
-            "status": true,
-            "department": "Materials Engineering",
-            "level": 2
-          },
-          {
-            "id": 114,
-            "fullName": "Arni Cottle",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 2
-          },
-          {
-            "id": 115,
-            "fullName": "Alric Wyllie",
-            "status": true,
-            "department": "Materials Engineering",
-            "level": 3
-          }
-        ]
       }
     ]
   },
@@ -1679,98 +1298,6 @@
             "level": 5
           }
         ]
-      },
-      {
-        "id": "5",
-        "title": "5 هندسة برمجيات",
-        "description": "محاضرة مهمة 5",
-        "date": "2024-02-05",
-        "attendance": [
-          {
-            "id": 174,
-            "fullName": "Jobyna Quinevan",
-            "status": false,
-            "department": "Chemical Engineering",
-            "level": 4
-          },
-          {
-            "id": 175,
-            "fullName": "Fields Mc Harg",
-            "status": false,
-            "department": "Chemical Engineering",
-            "level": 5
-          },
-          {
-            "id": 176,
-            "fullName": "Beatriz Turle",
-            "status": true,
-            "department": "Chemical Engineering",
-            "level": 2
-          },
-          {
-            "id": 177,
-            "fullName": "Kinny Boake",
-            "status": true,
-            "department": "Environmental Engineering",
-            "level": 1
-          },
-          {
-            "id": 178,
-            "fullName": "Nerti MacArte",
-            "status": false,
-            "department": "Civil Engineering",
-            "level": 1
-          },
-          {
-            "id": 179,
-            "fullName": "Walsh Squibb",
-            "status": false,
-            "department": "Materials Engineering",
-            "level": 4
-          },
-          {
-            "id": 180,
-            "fullName": "Carlie Iannuzzi",
-            "status": false,
-            "department": "Mechanical Engineering",
-            "level": 3
-          },
-          {
-            "id": 181,
-            "fullName": "Ailis Denerley",
-            "status": true,
-            "department": "Computer Engineering",
-            "level": 5
-          },
-          {
-            "id": 182,
-            "fullName": "Barbette Toothill",
-            "status": true,
-            "department": "Aerospace Engineering",
-            "level": 4
-          },
-          {
-            "id": 183,
-            "fullName": "Vita Hall",
-            "status": true,
-            "department": "Biomedical Engineering",
-            "level": 1
-          },
-          {
-            "id": 184,
-            "fullName": "Bobbette D'Alesco",
-            "status": false,
-            "department": "Civil Engineering",
-            "level": 4
-          },
-          {
-            "id": 185,
-            "fullName": "Olga Angus",
-            "status": false,
-            "department": "Industrial Engineering",
-            "level": 4
-          }
-        ]
       }
     ]
   },
@@ -2206,6 +1733,98 @@
             "fullName": "Charlean Thurlbeck",
             "status": false,
             "department": "Chemical Engineering",
+            "level": 4
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "6 نظم بيانات وتحكم",
+        "description": "محاضرة مهمة 6",
+        "date": "2024-03-06",
+        "attendance": [
+          {
+            "id": 174,
+            "fullName": "Jobyna Quinevan",
+            "status": false,
+            "department": "Chemical Engineering",
+            "level": 4
+          },
+          {
+            "id": 175,
+            "fullName": "Fields Mc Harg",
+            "status": false,
+            "department": "Chemical Engineering",
+            "level": 5
+          },
+          {
+            "id": 176,
+            "fullName": "Beatriz Turle",
+            "status": true,
+            "department": "Chemical Engineering",
+            "level": 2
+          },
+          {
+            "id": 177,
+            "fullName": "Kinny Boake",
+            "status": true,
+            "department": "Environmental Engineering",
+            "level": 1
+          },
+          {
+            "id": 178,
+            "fullName": "Nerti MacArte",
+            "status": false,
+            "department": "Civil Engineering",
+            "level": 1
+          },
+          {
+            "id": 179,
+            "fullName": "Walsh Squibb",
+            "status": false,
+            "department": "Materials Engineering",
+            "level": 4
+          },
+          {
+            "id": 180,
+            "fullName": "Carlie Iannuzzi",
+            "status": false,
+            "department": "Mechanical Engineering",
+            "level": 3
+          },
+          {
+            "id": 181,
+            "fullName": "Ailis Denerley",
+            "status": true,
+            "department": "Computer Engineering",
+            "level": 5
+          },
+          {
+            "id": 182,
+            "fullName": "Barbette Toothill",
+            "status": true,
+            "department": "Aerospace Engineering",
+            "level": 4
+          },
+          {
+            "id": 183,
+            "fullName": "Vita Hall",
+            "status": true,
+            "department": "Biomedical Engineering",
+            "level": 1
+          },
+          {
+            "id": 184,
+            "fullName": "Bobbette D'Alesco",
+            "status": false,
+            "department": "Civil Engineering",
+            "level": 4
+          },
+          {
+            "id": 185,
+            "fullName": "Olga Angus",
+            "status": false,
+            "department": "Industrial Engineering",
             "level": 4
           }
         ]
