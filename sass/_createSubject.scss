@@ -1,0 +1,46 @@
+@import './variables';
+@import './responsive';
+
+$padding: 0.3rem 0.5rem;
+
+.add-subject {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  label {
+    font-size: $fs-600;
+    font-weight: 800;
+  }
+
+  input,
+  textarea {
+    font-size: $fs-500;
+    margin-bottom: 0.5rem;
+    outline-color: $clr-primary;
+    padding: $padding;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .buttons {
+    justify-content: space-between;
+  }
+
+  .add,
+  .cancel {
+    padding: 0.65rem 0.2rem;
+    width: 100%;
+  }
+}
+
+.ui-widget-overlay {
+  opacity: 0.5 !important; /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=50) !important;
+
+  background: rgb(50, 50, 50) !important; /* This will make it darker */
+}

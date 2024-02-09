@@ -252,6 +252,10 @@ button {
   background-color: #fff;
 }
 
+.bg-warning {
+  background-color: #e74040;
+}
+
 .text-primary {
   color: #0468bf;
 }
@@ -270,6 +274,10 @@ button {
 
 .text-white {
   color: #fff;
+}
+
+.text-warning {
+  color: #e74040;
 }
 
 .box {
@@ -1152,6 +1160,65 @@ tfoot {
   }
 }
 /* font-families */
+/* Colors */
+:root {
+  --fs-900: 5rem;
+  --fs-800: 2rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1.25rem;
+  --fs-500: 1.15rem;
+  --fs-400: 1rem;
+  --fs-300: 0.875rem;
+  --fs-200: 0.7rem;
+}
+
+@media (max-width: 599px) {
+  :root {
+    --fs-900: 1.5rem;
+    --fs-800: 1.15rem;
+    --fs-700: 1rem;
+    --fs-600: 0.9rem;
+    --fs-500: 0.8rem;
+    --fs-400: 0.75rem;
+    --fs-300: 0.75rem;
+    --fs-200: 0.65rem;
+  }
+}
+/* font-families */
+.add-subject form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.add-subject label {
+  font-size: var(--fs-600);
+  font-weight: 800;
+}
+.add-subject input,
+.add-subject textarea {
+  font-size: var(--fs-500);
+  margin-bottom: 0.5rem;
+  outline-color: #0468bf;
+  padding: 0.3rem 0.5rem;
+}
+.add-subject textarea {
+  resize: none;
+}
+.add-subject .buttons {
+  justify-content: space-between;
+}
+.add-subject .add,
+.add-subject .cancel {
+  padding: 0.65rem 0.2rem;
+  width: 100%;
+}
+
+.ui-widget-overlay {
+  opacity: 0.5 !important; /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=50) !important;
+  background: rgb(50, 50, 50) !important; /* This will make it darker */
+}
+
 /* ------------ sections container ----------------- */
 .container {
   display: grid;
